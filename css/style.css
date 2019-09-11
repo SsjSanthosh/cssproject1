@@ -16,6 +16,10 @@ html {
   html {
     font-size: 62.5%; } }
 
+@media only screen and (max-width: 600px) {
+  html {
+    padding: 0; } }
+
 /* USE FOR BUTTON */
 .btn {
   border: 0;
@@ -109,15 +113,28 @@ html {
     background-color: black; }
 
 .story-card {
-  width: 50%;
+  width: 80%;
   padding: 3% 5%;
+  margin: 0 auto;
   padding-bottom: 2%;
   background-color: rgba(255, 255, 255, 0.6);
-  margin: 0 auto;
   margin-bottom: 5%;
   transform: skewX(-12deg); }
   .story-card > * {
     transform: skewX(12deg); }
+  .story-card .story-img-div {
+    position: relative; }
+    .story-card .story-img-div .story-caption {
+      position: absolute;
+      top: 50%;
+      transition: all 0.5s;
+      left: 50%;
+      text-align: center;
+      transform: translate(-50%, -50%);
+      color: white;
+      font-size: 2rem;
+      font-weight: 300;
+      opacity: 0; }
   .story-card .story-img {
     width: 15rem;
     height: 15rem;
@@ -125,26 +142,12 @@ html {
     z-index: -1;
     transform: scale(1.2);
     transition: all 0.3s; }
-  .story-card .story-shape {
-    position: relative;
-    transform: translateY(-15%); }
-    .story-card .story-shape:hover .story-caption {
-      opacity: 1;
-      z-index: 11; }
-    .story-card .story-shape:hover .story-img {
-      filter: blur(0.2rem);
-      transform: scale(1); }
-  .story-card .story-caption {
-    position: absolute;
-    top: 50%;
-    transition: all 0.5s;
-    left: 50%;
-    text-align: center;
-    transform: translate(-50%, -50%);
-    color: white;
-    font-size: 3.4rem;
-    font-weight: 300;
-    opacity: 0; }
+  .story-card .story-shape:hover .story-caption {
+    opacity: 1;
+    z-index: 11; }
+  .story-card .story-shape:hover .story-img {
+    filter: blur(0.2rem);
+    transform: scale(1); }
 
 .form-group:not(:last-child) {
   margin-bottom: 2rem; }
@@ -652,9 +655,14 @@ hr {
   position: relative; }
   .stories .stories-grid {
     display: grid;
-    grid-template-columns: 1fr 4fr;
-    grid-column-gap: 3rem;
-    grid-row-gap: 5rem; }
+    grid-template-columns: 2fr 6fr;
+    grid-column-gap: 4rem;
+    grid-row-gap: 5rem;
+    justify-content: center;
+    align-items: center; }
+    .stories .stories-grid .story-img-div,
+    .stories .stories-grid .story-shape {
+      position: relative; }
   .stories .about-section-link {
     padding: 0;
     text-align: center;
@@ -664,6 +672,80 @@ hr {
     margin-top: -3%; }
   .stories .row {
     z-index: 123; }
+
+@media only screen and (max-width: 1200px) {
+  .stories .stories-grid .lorem-text {
+    line-height: 2.3rem; }
+  .stories .story-card {
+    width: 90%;
+    padding: 5% 5%; }
+    .stories .story-card .story-img,
+    .stories .story-card .story-img-div {
+      width: 10rem;
+      height: 10rem; } }
+
+@media only screen and (max-width: 850px) {
+  .stories .story-card .lorem-text {
+    font-size: 1.5rem;
+    line-height: 1.6rem; } }
+
+@media only screen and (max-width: 600px) {
+  .stories {
+    padding: 10% 4%; }
+    .stories .row {
+      display: grid;
+      grid-template-rows: 1fr 1fr;
+      justify-content: center;
+      align-items: center; }
+    .stories .heading-secondary {
+      font-size: 3rem; }
+    .stories .stories-grid {
+      margin: 0 5%;
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-template-rows: 1fr 1fr;
+      grid-column-gap: 4rem;
+      grid-row-gap: 1rem; }
+    .stories .story-card {
+      width: 85%;
+      padding: 8%; }
+      .stories .story-card .heading-tertiary {
+        font-size: 2rem;
+        line-height: 2rem;
+        margin-bottom: 3%; }
+      .stories .story-card .lorem-text {
+        font-size: 1rem;
+        line-height: 1rem;
+        text-align: justify; }
+      .stories .story-card .story-img,
+      .stories .story-card .story-img-div {
+        width: 6rem;
+        height: 6rem;
+        margin: 0 auto; } }
+
+@media only screen and (max-width: 400px) {
+  .stories {
+    padding: 5%; }
+    .stories .story-card {
+      width: 70%;
+      padding: 10% 10%;
+      transform: skewX(0deg); }
+      .stories .story-card > * {
+        transform: skewX(0deg); }
+      .stories .story-card .lorem-text {
+        text-align: justify;
+        padding: 0 5%;
+        font-size: 1.2rem;
+        line-height: 2rem;
+        margin-top: 2%; }
+      .stories .story-card .heading-tertiary {
+        font-size: 1.5rem;
+        text-align: center; }
+      .stories .story-card .story-img,
+      .stories .story-card .story-img-div {
+        width: 9rem;
+        height: 9rem;
+        margin: 0 auto; } }
 
 .bg-video {
   position: absolute;
