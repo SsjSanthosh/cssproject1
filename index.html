@@ -19,6 +19,7 @@
   </head>
   <body>
     <!-- NAVIGATION -->
+
     <div class="navigation">
       <input type="checkbox" id="navi-toggle" class="navigation-checkbox" />
 
@@ -34,21 +35,61 @@
             <a href="#about" class="navigation-link">About</a>
           </li>
           <li class="navigation-item">
-            <a href="#" class="navigation-link">Benefits</a>
+            <a href="#features" class="navigation-link">Benefits</a>
           </li>
           <li class="navigation-item">
-            <a href="#" class="navigation-link">Tours</a>
+            <a href="#tours" class="navigation-link">Tours</a>
           </li>
           <li class="navigation-item">
-            <a href="#" class="navigation-link">Stories</a>
+            <a href="#stories" class="navigation-link">Stories</a>
           </li>
         </ul>
       </nav>
     </div>
 
+    <!-- POPUP -->
+    <div class="popup" id="popup">
+      <div class="popup-content">
+        <span class="popup-close"
+          ><a href="#">
+            &times;
+          </a></span
+        >
+        <div class="popup-img-div">
+          <img src="img/nat-7.jpg" alt="" class="popup-img" />
+          <img src="img/nat-8.jpg" alt="" class="popup-img" />
+        </div>
+        <div class="popup-content-div">
+          <div class="heading-secondary">START BOOKING NOW</div>
+          <div class="heading-tertiary">
+            Please read all the terms and conditions.
+          </div>
+          <div class="popup-text-grid">
+            <div class="popup-text-1 lorem-text">
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+              Quibusdam non saepe eligendi id repudiandae. Exercitationem vel
+              aliquam nesciunt tempora corrupti delectus incidunt reprehenderit,
+              eos dolores odit asperiores ullam quidem eaque, voluptatum aut
+              aspernatur labore nisi aperiam porro eligendi. Nisi sed numquam
+              molestiae ex ut iure ipsa illum quasi aliquam ducimus!
+            </div>
+            <div class="popup-text-2 lorem-text">
+              Minima expedita ea tempora error sequi quae aspernatur, totam
+              omnis optio. Sequi, corrupti. Maiores incidunt debitis distinctio
+              possimus rem, alias, cum voluptates non modi animi vitae.
+              Excepturi cum laboriosam vitae ab magni autem. Saepe dolores
+              fugiat eius molestiae assumenda libero omnis sequi!
+            </div>
+          </div>
+          <div class="popup-btn u-center-text ">
+            <button class="btn ">BOOK NOW</button>
+          </div>
+        </div>
+      </div>
+    </div>
     <!-- HEADER HERO -->
 
-    <header class="header">
+    <header class="header" id="header">
       <div class="header-logo-box">
         <img src="img/logo-white.png" alt="Logo" class="header-logo-img" />
       </div>
@@ -60,7 +101,7 @@
           </h1>
         </div>
         <div class="header-btn-div">
-          <a href="#">
+          <a href="#tours">
             <button class="header-btn btn">
               DISCOVER OUR TOURS
             </button>
@@ -70,7 +111,7 @@
     </header>
 
     <!-- ABOUT SECTION -->
-    <section class="about-section" id="#about">
+    <section class="about-section" id="about">
       <div class="container">
         <div class="u-center-text">
           <h2 class="heading-secondary">
@@ -137,7 +178,7 @@
 
     <!-- FEATURES SECTION -->
 
-    <section class="features">
+    <section class="features" id="features">
       <div class="row">
         <div class="features-grid">
           <div class="card-item">
@@ -206,7 +247,7 @@
 
     <!-- TOURS SECTION -->
 
-    <section class="tours">
+    <section class="tours" id="tours">
       <h3 class="heading-secondary u-center-text">
         OUR MOST POPULAR TOURS
       </h3>
@@ -246,7 +287,9 @@
             <div class="back-container">
               <div class="tours-only">ONLY</div>
               <div class="tours-price">23000 INR</div>
-              <button class="btn header-btn">BOOK NOW!</button>
+              <a href="#popup"
+                ><button class="btn header-btn">BOOK NOW!</button></a
+              >
             </div>
           </div>
         </div>
@@ -286,7 +329,9 @@
             <div class="back-container">
               <div class="tours-only">ONLY</div>
               <div class="tours-price">18000 INR</div>
-              <button class="btn header-btn">BOOK NOW!</button>
+              <a href="#popup">
+                <button class="btn header-btn">BOOK NOW!</button></a
+              >
             </div>
           </div>
         </div>
@@ -328,7 +373,9 @@
             <div class="back-container">
               <div class="tours-only">ONLY</div>
               <div class="tours-price">34000 INR</div>
-              <button class="btn header-btn">BOOK NOW!</button>
+              <a href="#popup">
+                <button class="btn header-btn">BOOK NOW!</button></a
+              >
             </div>
           </div>
         </div>
@@ -338,7 +385,7 @@
 
     <!-- STORIES SECTION -->
 
-    <section class="stories">
+    <section class="stories" id="stories">
       <div class="bg-video">
         <video
           src="img/video.webm"
@@ -398,7 +445,7 @@
     </section>
 
     <!-- BOOKING SECTION -->
-    <div class="booking">
+    <div class="booking" id="booking">
       <div class="row">
         <div class="book">
           <div class="book-container">
@@ -436,7 +483,7 @@
     </div>
 
     <!-- FOOTER -->
-    <footer class="footer">
+    <footer class="footer" id="footer">
       <div class="footer-logo-div">
         <img src="img/logo-green-1x.png" alt="" class="footer-logo" />
       </div>
