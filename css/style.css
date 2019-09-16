@@ -4,6 +4,11 @@ body::before {
   padding: 0;
   margin: 0;
   box-sizing: border-box; }
+  @media only screen and (max-width: 400px) {
+    body,
+    body::after,
+    body::before {
+      overflow-x: hidden; } }
 
 html {
   font-size: 62.5%;
@@ -37,32 +42,6 @@ html {
 
 .btn:focus {
   outline: 0; }
-
-.section-images {
-  display: grid;
-  padding: 10% 5%;
-  margin-top: 5%;
-  margin-left: 0;
-  grid-template-columns: repeat(5, minmax(6rem, 12rem));
-  grid-template-rows: repeat(5, minmax(6rem, 12rem)); }
-  .section-images-img {
-    width: 100%;
-    display: block;
-    transition: all 0.2s;
-    box-shadow: 0 0.7rem 1.5rem rgba(0, 0, 0, 0.8); }
-    .section-images-img:hover {
-      transform: scale(1.2);
-      padding: 5%;
-      border: 5px solid #55c57a;
-      box-shadow: 0 1.4rem 2rem rgba(0, 0, 0, 0.8); }
-  .section-images .img-1 {
-    grid-column: 1 / 5;
-    grid-row-gap: 1 / 3;
-    object-fit: cover; }
-  .section-images .img-2 {
-    grid-column: 3 / 6; }
-  .section-images .img-3 {
-    grid-column: 2 / 4; }
 
 .icon-item {
   font-size: 10rem;
@@ -395,7 +374,7 @@ hr {
     visibility: visible; }
   .popup-close {
     position: absolute;
-    top: 1rem;
+    top: 4rem;
     right: 3rem;
     font-size: 4rem; }
     .popup-close a {
@@ -421,6 +400,9 @@ hr {
       .popup-content {
         width: 95vw;
         height: 90vh; } }
+    @media only screen and (max-width: 400px) {
+      .popup-content .lorem-text {
+        font-size: 1.3rem; } }
     @media only screen and (max-width: 900px) {
       .popup-content {
         grid-template-columns: 1fr;
@@ -453,6 +435,9 @@ hr {
   @media only screen and (max-width: 1200px) {
     .popup .heading-secondary {
       font-size: 3rem; } }
+  @media only screen and (max-width: 4500px) {
+    .popup .heading-secondary {
+      font-size: 2rem; } }
   @media only screen and (max-width: 900px) {
     .popup .heading-tertiary {
       font-size: 1.5rem; } }
@@ -506,12 +491,12 @@ hr {
 
 .navigation-btn {
   background-color: white;
-  height: 6rem;
-  width: 6rem;
   position: fixed;
   top: 4rem;
   right: 6rem;
-  z-index: 2000;
+  height: 6rem;
+  width: 6rem;
+  z-index: 20000;
   border-radius: 50%;
   box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.7);
   cursor: pointer; }
@@ -653,21 +638,84 @@ hr {
   width: 100%;
   margin-top: -25vh;
   padding-top: 25vh;
-  padding-bottom: 5%; }
+  padding-bottom: 15%; }
+  @media only screen and (max-width: 1100px) {
+    .about-section {
+      padding-bottom: 20%; } }
   .about-section-grid {
     display: grid;
     grid-template-columns: 50vw 50vw; }
-    @media only screen and (max-width: 1000px) {
+    @media only screen and (max-width: 1100px) {
       .about-section-grid {
         grid-template-columns: 1fr;
         grid-template-rows: 1fr 1fr;
-        grid-row-gap: 5rem; } }
+        grid-row-gap: 3rem; } }
+    @media only screen and (max-width: 1100px) {
+      .about-section-grid {
+        grid-template-rows: 40vh 50vh; } }
+    @media only screen and (max-width: 600px) {
+      .about-section-grid {
+        grid-template-rows: 40vh 120vh; } }
   .about-section-text {
-    padding: 10%; }
-
-@media only screen and (max-width: 1400px) {
-  .section-images {
-    padding: 10%; } }
+    padding: 5%; }
+    @media only screen and (max-width: 1100px) {
+      .about-section-text {
+        grid-row: 2; } }
+  .about-section .section-images {
+    padding: 5%;
+    margin-bottom: 5%;
+    overflow-x: hidden; }
+    @media only screen and (max-width: 1100px) {
+      .about-section .section-images {
+        padding: 0;
+        margin: 0; } }
+    .about-section .section-images .section-images-div {
+      position: relative; }
+    .about-section .section-images .section-images-img {
+      position: absolute;
+      height: 27rem;
+      transition: all 0.2s; }
+      @media only screen and (max-width: 800px) {
+        .about-section .section-images .section-images-img {
+          height: 20rem; } }
+      @media only screen and (max-width: 500px) {
+        .about-section .section-images .section-images-img {
+          height: 17rem; } }
+      .about-section .section-images .section-images-img:hover {
+        padding: 2rem;
+        z-index: 1900000;
+        transform: scale(1.1);
+        border: 3px solid #55c57a; }
+    .about-section .section-images .img-1 {
+      top: 10%;
+      left: 0%; }
+      @media only screen and (max-width: 1100px) {
+        .about-section .section-images .img-1 {
+          top: 10%;
+          left: 10%; } }
+      @media only screen and (max-width: 600px) {
+        .about-section .section-images .img-1 {
+          top: 10%;
+          left: 5%; } }
+      @media only screen and (max-width: 520px) {
+        .about-section .section-images .img-1 {
+          top: 10%;
+          left: 10%; } }
+    .about-section .section-images .img-2 {
+      top: 30%;
+      left: 10%; }
+      @media only screen and (max-width: 1100px) {
+        .about-section .section-images .img-2 {
+          top: 40%;
+          left: 30%; } }
+      @media only screen and (max-width: 600px) {
+        .about-section .section-images .img-2 {
+          top: 20%;
+          left: 30%; } }
+      @media only screen and (max-width: 520px) {
+        .about-section .section-images .img-2 {
+          top: 30%;
+          left: 25%; } }
 
 .features {
   padding: 5%;
@@ -718,8 +766,24 @@ hr {
   padding-top: 20%;
   margin-top: -10%;
   padding-bottom: 15%;
-  padding-left: 10%;
-  padding-right: 10%; }
+  padding-left: 6%;
+  padding-right: 6%; }
+  @media only screen and (max-width: 900px) {
+    .tours {
+      padding-left: 2%;
+      padding-right: 2%; } }
+  @media only screen and (max-width: 700px) {
+    .tours {
+      padding-left: 12%;
+      padding-right: 12%; } }
+  @media only screen and (max-width: 500px) {
+    .tours {
+      padding-left: 8%;
+      padding-right: 8%; } }
+  @media only screen and (max-width: 430px) {
+    .tours {
+      padding-left: 4%;
+      padding-right: 4%; } }
   .tours .heading-secondary {
     font-weight: 300; }
   .tours .heading-tertiary {
@@ -734,6 +798,11 @@ hr {
     grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
     grid-column-gap: 8rem;
     grid-row-gap: 10rem; }
+    @media only screen and (max-width: 900px) {
+      .tours-grid {
+        grid-template-columns: repeat(auto-fit, minmax(28rem, 1fr));
+        grid-column-gap: 2rem;
+        grid-row-gap: 6rem; } }
   .tours .card .card-front,
   .tours .card .card-back {
     position: absolute; }
@@ -816,6 +885,8 @@ hr {
 .stories {
   padding: 5% 0;
   position: relative; }
+  .stories .story-text .lorem-text {
+    margin-top: 3%; }
   .stories .stories-grid {
     display: grid;
     grid-template-columns: 2fr 6fr;
@@ -879,8 +950,8 @@ hr {
         line-height: 2rem;
         margin-bottom: 3%; }
       .stories .story-card .lorem-text {
-        font-size: 1rem;
-        line-height: 1rem;
+        font-size: 1.5rem;
+        line-height: 2rem;
         text-align: justify; }
       .stories .story-card .story-img,
       .stories .story-card .story-img-div {
@@ -892,8 +963,8 @@ hr {
   .stories {
     padding: 5%; }
     .stories .story-card {
-      width: 70%;
-      padding: 10% 10%;
+      width: 80%;
+      padding: 15% 10%;
       transform: skewX(0deg); }
       .stories .story-card > * {
         transform: skewX(0deg); }
@@ -927,18 +998,35 @@ hr {
 
 .booking {
   width: 100%;
-  padding: 10% 0;
+  padding: 5% 0;
   background-image: linear-gradient(to right bottom, #7ed56f, #28b485); }
+  @media only screen and (max-width: 550px) {
+    .booking {
+      padding: 5% 0; } }
 
 .book {
   background-image: linear-gradient(110deg, rgba(255, 255, 255, 0.8) 60%, transparent 60%), url("../img/nat-10.jpg");
   background-size: cover;
   border-radius: 3px;
   box-shadow: 0 2rem 4rem rgba(0, 0, 0, 0.7); }
+  @media only screen and (max-width: 550px) {
+    .book {
+      width: 95%;
+      padding: 1rem; } }
   .book .book-container {
     width: 50%;
     height: 100%;
     padding: 4rem; }
+    @media only screen and (max-width: 850px) {
+      .book .book-container {
+        width: 80%;
+        padding: 2rem; }
+        .book .book-container .heading-secondary {
+          font-size: 3rem; } }
+    @media only screen and (max-width: 550px) {
+      .book .book-container {
+        width: 95%;
+        padding: 1rem; } }
   .book .header-btn {
     background-color: transparent;
     color: black;
